@@ -28,7 +28,7 @@ Project Structure:
 Installation Instructions:
 
 Clone the repository:
- # git clone https://github.com/yourusername/ddos-finder.git
+ # git clone https://github.com/Lakiya7/ddos-finder.git
 
 Navigate to the project directory:
 #  cd ddos-finder
