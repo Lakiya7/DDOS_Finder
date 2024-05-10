@@ -28,22 +28,47 @@ Project Structure:
 Installation Instructions:
 
 Clone the repository:
-git clone https://github.com/yourusername/ddos-finder.git
+ # git clone https://github.com/yourusername/ddos-finder.git
 
 Navigate to the project directory:
-cd ddos-finder
+#  cd ddos-finder
 
 Create and activate a virtual environment:
-python3 -m venv venv
-source venv/bin/activate
+#  python3 -m venv venv
+#  source venv/bin/activate
 
 Install the required Python libraries:
-pip install -r requirements.txt
+#  pip install -r requirements.txt
 
 Set up Firebase Google Authentication:
-Create a Firebase project and enable Google Authentication.
-Download the firebase_config.json file and add it to the project root.
+#  Create a Firebase project and enable Google Authentication.
+#  Download the firebase_config.json file and add it to the project root.
+
+Start the Flask web application:
+#  python app.py
 
 
+Usage Instructions:
+1.	Access the Web Application:
+  •	Open a web browser and go to http://localhost:5000.
+  •	Log in using your Google account via Firebase.
+2.	Train the Model:
+  •	Navigate to the "Train Model" section to train the DDoS detection model.
+  •	Upload telemetry data, and the system will automatically train and save the model.
+3.	Detect DDoS Attacks:
+  •	Go to the "Detect DDoS" section to analyze new telemetry data.
+  •	The system will classify traffic as "BENIGN" or "DDoS."
+4.	View Alerts and Reports:
+  •	Alerts are generated in real-time for detected DDoS attacks.
+  •	Review detailed classification reports and feature importances.
+Future Work:
+  •	Integrate real-time alerts via email/SMS.
+  •	Implement web hosting with No-IP DNS configuration.
+  •	Develop a lightweight, hardware-based solution for IP cameras.
+  •	Incorporate federated learning and blockchain-backed trust frameworks.
 
+Contributors:
+  •	Sasanka M.W.K.L.
+  
+License: This project is licensed under the MIT License.
 
