@@ -1,0 +1,45 @@
+/home/kali/.local/lib/python3.11/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator StandardScaler from version 1.2.2 when using version 1.4.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+/home/kali/.local/lib/python3.11/site-packages/sklearn/base.py:376: InconsistentVersionWarning: Trying to unpickle estimator DecisionTreeClassifier from version 1.2.2 when using version 1.4.2. This might lead to breaking code or invalid results. Use at your own risk. For more info please refer to:
+https://scikit-learn.org/stable/model_persistence.html#security-maintainability-limitations
+  warnings.warn(
+Traceback (most recent call last):
+  File "/home/kali/Desktop/ISP/app.py", line 8, in <module>
+    model = load('DDOS_model01.joblib')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/.local/lib/python3.11/site-packages/joblib/numpy_pickle.py", line 658, in load
+    obj = _unpickle(fobj, filename, mmap_mode)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kali/.local/lib/python3.11/site-packages/joblib/numpy_pickle.py", line 577, in _unpickle
+    obj = unpickler.load()
+          ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pickle.py", line 1213, in load
+    dispatch[key[0]](self)
+  File "/home/kali/.local/lib/python3.11/site-packages/joblib/numpy_pickle.py", line 402, in load_build
+    Unpickler.load_build(self)
+  File "/usr/lib/python3.11/pickle.py", line 1718, in load_build
+    setstate(state)
+  File "sklearn/tree/_tree.pyx", line 865, in sklearn.tree._tree.Tree.__setstate__
+  File "sklearn/tree/_tree.pyx", line 1571, in sklearn.tree._tree._check_node_ndarray
+ValueError: node array from the pickle has an incompatible dtype:
+- expected: {'names': ['left_child', 'right_child', 'feature', 'threshold', 'impurity', 'n_node_samples', 'weighted_n_node_samples', 'missing_go_to_left'], 'formats': ['<i8', '<i8', '<i8', '<f8', '<f8', '<i8', '<f8', 'u1'], 'offsets': [0, 8, 16, 24, 32, 40, 48, 56], 'itemsize': 64}
+- got     : [('left_child', '<i8'), ('right_child', '<i8'), ('feature', '<i8'), ('threshold', '<f8'), ('impurity', '<f8'), ('n_node_samples', '<i8'), ('weighted_n_node_samples', '<f8')]
+
+
+
+
+
+80	2710	5	0	0	0	0	0	0	0	0	0	0	0	0	1845.01845	677.5	863.8728687	1965	132	2710	677.5	863.8728687	1965	132	0	0	0	0	0	0	0	0	0	160	0	1845.01845	0	0	0	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	160	0	0	0	0	0	0	5	0	0	0	251	-1	0	32	0	0	0	0	0	0	0	0
+ssssss
+
+
+DDOS traffic
+80,2710,5,0,0,0,0,0,0,0,0,0,0,0,0,1845.01845,677.5,863.8728687,1965,132,2710,677.5,863.8728687,1965,132,0,0,0,0,0,0,0,0,0,160,0,1845.01845,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,160,0,0,0,0,0,0,5,0,0,0,251,-1,0,32,0,0,0,0,0,0,0,0
+
+
+
+Normal
+53524,154,1,1,0,0,0,0,0,0,0,0,0,0,0,12987.01299,154,0,154,154,0,0,0,0,0,0,0,0,0,0,0,0,0,0,32,32,6493.506494,6493.506494,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,32,0,0,0,0,0,0,1,0,1,0,130,65535,0,32,0,0,0,0,0,0,0,0
+
+

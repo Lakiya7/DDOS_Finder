@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../static/style.css">
+    <script type="module" src="../static/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js"></script>
+  
+</head>
+<body>
+    <div class="login-box">
+        <div class="left">
+            <h1>Sign up</h1>
+            <input type="text" id="email" name="email" placeholder="E-mail">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="submit" id="saveData" name="signup_submit" value="Sign in">
+        </div>
+        <div class="right">
+            <span class="loginwith">Sign in with<br>social network</span>
+            <button class="social-signin facebook">Log in with Facebook</button>
+            <button class="social-signin twitter">Log in with Twitter</button>
+            <button class="social-signin google" id="login">Log in with Google</button>
+        </div>
+
+        <!-- Logo Container -->
+        <div class="logo-container">
+            <img src="../static/images/logo_Auth01.png" alt="Logo">
+        </div>
+    </div>
+</body>
+</html>

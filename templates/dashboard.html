@@ -1,0 +1,104 @@
+<!-- ISP_Web_App/templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_dashboard.css') }}">
+    <link rel="stylesheet" href="../static/style_dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Link11 WebGUI</h3>
+            </div>
+            <ul class="list-unstyled components">
+                <li class="active"><a href="#">Dashboard</a></li>
+                <li><a href="#">Boot Hub</a></li>
+                <li><a href="#">Tools</a></li>
+                <li><a href="#">Purchase</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <nav class="navbar">
+                <h4>View your Dashboard</h4>
+                <div class="navbar-right">
+                    <input type="text" id="date-range" value="2018-03-19 - 2018-03-20">
+                    <a href="#">Log out</a>
+                </div>
+            </nav>
+            <div class="top-stats-container">
+                <div class="top-stat-box red">
+                    <h3>Total Users</h3>
+                    <p>125,963</p>
+                    <p>Users with Premium</p>
+                </div>
+                <div class="top-stat-box blue">
+                    <h3>Floods Launched</h3>
+                    <p>826,270</p>
+                    <p>Floods Stopped</p>
+                </div>
+                <div class="top-stat-box green">
+                    <h3>Servers Online</h3>
+                    <p>8</p>
+                    <p>Current Network Capacity</p>
+                </div>
+                <div class="top-stat-box grey">
+                    <h3>Online Users</h3>
+                    <p>11</p>
+                    <p>Users Online with Premium</p>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="chart-container">
+                    <h3>Floods Launched</h3>
+                    <canvas id="floods-chart"></canvas>
+                </div>
+                <div class="method-statistics">
+                    <h3>Method Statistics</h3>
+                    <ul>
+                        <li><span class="label">DNS</span><span class="bar"><span style="width: 39.64%"></span></span><span class="percent">39.64%</span></li>
+                        <li><span class="label">XMLRPC</span><span class="bar"><span style="width: 21.37%"></span></span><span class="percent">21.37%</span></li>
+                        <li><span class="label">VSE</span><span class="bar"><span style="width: 10.86%"></span></span><span class="percent">10.86%</span></li>
+                        <li><span class="label">ACK</span><span class="bar"><span style="width: 6.94%"></span></span><span class="percent">6.94%</span></li>
+                        <li><span class="label">SSYN</span><span class="bar"><span style="width: 5.76%"></span></span><span class="percent">5.76%</span></li>
+                        <li><span class="label">NTP</span><span class="bar"><span style="width: 4.67%"></span></span><span class="percent">4.67%</span></li>
+                        <li><span class="label">CHARGEN</span><span class="bar"><span style="width: 3.9%"></span></span><span class="percent">3.9%</span></li>
+                        <li><span class="label">LAG</span><span class="bar"><span style="width: 2.93%"></span></span><span class="percent">2.93%</span></li>
+                        <li><span class="label">PORTMAP</span><span class="bar"><span style="width: 2.93%"></span></span><span class="percent">2.93%</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Floods Chart
+        const floodsChartCtx = document.getElementById('floods-chart').getContext('2d');
+        new Chart(floodsChartCtx, {
+            type: 'line',
+            data: {
+                labels: ['2017-07-19', '2017-07-20', '2017-07-21', '2017-07-22', '2017-07-23', '2017-07-24', '2017-07-25', '2017-07-26'],
+                datasets: [
+                    { label: 'Floods Launched', data: [600, 700, 800, 700, 600, 500, 400, 500], borderColor: 'white', borderWidth: 2, fill: false }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: { title: { display: true, text: 'Date' } },
+                    y: { title: { display: true, text: 'Count' } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

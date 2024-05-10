@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DDoS Finder Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .logo {
+            width: 120px;
+            margin-right: 10px;
+        }
+        .jumbotron {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='images/logo_Auth01.png') }}" alt="DDoS Finder Logo" class="logo">
+            DDoS Finder
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-5">DDoS Attack Prediction</h1>
+            <p class="lead">Enter your features below to detect if a DDoS attack is occurring.</p>
+            <hr class="my-4">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="data">Enter your features (comma-separated):</label>
+                    <input type="text" class="form-control" id="data" name="data" placeholder="e.g., 12.5, 45.3, 89.1" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Predict</button>
+            </form>
+            {% if prediction %}
+                <div class="alert {% if 'DDoS Attack Detected' in prediction %}alert-danger{% else %}alert-info{% endif %} mt-3">
+                    <h4>Prediction: {{ prediction }}</h4>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 DDoS Finder Dashboard. All Rights Reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

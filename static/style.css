@@ -1,0 +1,240 @@
+/* cssFile.css */
+
+body {
+    background: #2c3e50;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    width: 600px;
+    margin: 0 auto;
+    background: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-box .left,
+.login-box .right {
+    width: 45%;
+}
+
+.login-box .left h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.login-box input[type="submit"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #27ae60;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-box input[type="submit"]:hover {
+    background: #2ecc71;
+}
+
+.login-box .right {
+    text-align: center;
+}
+
+.login-box .right .loginwith {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-box .right button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #2980b9;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+}
+
+.login-box .right button.twitter {
+    background: #00acee;
+}
+
+.login-box .right button.google {
+    background: #db4437;
+}
+
+.login-box .right button:hover {
+    opacity: 0.8;
+}
+
+.or {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/*------------------ */
+
+body {
+    background-color: #3B4D65;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-box {
+    width: 500px;
+    padding: 40px;
+    background-color: #F7F7F7;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+}
+
+.left, .right {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.left {
+    border-right: 1px solid #CCC;
+    text-align: center;
+}
+
+.right {
+    text-align: center;
+}
+
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F7F7F7;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container img {
+    width: 70px;
+    height: 70px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.social-signin {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+}
+
+.social-signin.facebook {
+    background-color: #3B5998;
+}
+
+.social-signin.twitter {
+    background-color: #1DA1F2;
+}
+
+.social-signin.google {
+    background-color: #DB4437;
+}
+
+.social-signin:hover {
+    opacity: 0.8;
+}
+
+.loginwith {
+    font-size: 15px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.or {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #999;
+}
